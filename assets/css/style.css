@@ -6,11 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 @font-face {
   font-family: "Work Sans";
   src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
@@ -24,6 +22,7 @@ input,
 button,
 textarea {
   font: inherit;
+  cursor: pointer;
 }
 img {
   max-width: 100%;
@@ -49,6 +48,7 @@ header {
   margin: 0 auto;
   border-radius: 10px;
   padding: 1em 0;
+  max-width: 500px;
 }
 
 /* HEADER STYLING */
@@ -83,7 +83,7 @@ header {
   width: 100%;
   justify-content: space-between;
   border: none;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .btn-text {
   width: 80%;
@@ -92,13 +92,14 @@ header {
 .btn-text:hover {
   color: #ad28eb;
 }
-.faq_answers {
-  /* display: none; */
+.faq_answer {
+  display: none;
   line-height: 1.2em;
   margin-top: 1em;
   color: hsl(292, 16%, 49%);
   font-weight: 500;
-  transition: display 0.3s ease-in-out;
+  animation: growDown 300ms ease-in-out;
+  transform-origin: top;
 }
 
 /* STATE STYLING */
@@ -118,4 +119,24 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 370px) {
+  header {
+    background: url(/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    min-height: 20vh;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
