@@ -1,0 +1,121 @@
+/* RESET STYLING */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  background-color: hsl(275, 100%, 97%);
+}
+input,
+button,
+textarea {
+  font: inherit;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* HEADER STYLING */
+header {
+  background: url(/assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  height: 35vh;
+}
+
+/* MAIN STYLING */
+.main {
+  background-color: #fff;
+  position: relative;
+  top: -5em;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1em 0;
+}
+
+/* HEADER STYLING */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+.header-text {
+  font-size: 2em;
+}
+
+/* FAQ SECTION */
+.faq-question {
+  padding: 1em 0;
+}
+/* .faq-question:nth-child(1),
+.faq-question:nth-child(2),
+.faq-question:nth-child(3) {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+} */
+.faq-question:nth-child(-n + 3) {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.toggle-list {
+  background: none;
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border: none;
+  font-size: 1.2em;
+}
+.btn-text {
+  width: 80%;
+  transition: color 0.3s ease-in-out;
+}
+.btn-text:hover {
+  color: #ad28eb;
+}
+.faq_answers {
+  /* display: none; */
+  line-height: 1.2em;
+  margin-top: 1em;
+  color: hsl(292, 16%, 49%);
+  font-weight: 500;
+  transition: display 0.3s ease-in-out;
+}
+
+/* STATE STYLING */
+/* .faq_answers {
+  display: none;
+} */
+.minus-icon {
+  display: none;
+}
+.active-list {
+  display: block;
+}
+/* ATTRIBUTION STYLING */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
