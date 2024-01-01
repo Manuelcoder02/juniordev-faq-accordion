@@ -17,7 +17,6 @@ const faqAnswers = document.querySelectorAll(".faq_answer");
 
 faqQuestions[0].addEventListener("click", function () {
   faqAnswers[0].classList.toggle("active-list");
-
   faqAnswers[1].classList.remove("active-list");
   faqAnswers[2].classList.remove("active-list");
   faqAnswers[3].classList.remove("active-list");
