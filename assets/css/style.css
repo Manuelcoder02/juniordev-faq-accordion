@@ -112,6 +112,9 @@ header {
 .active-list {
   display: block;
 }
+.inactive-list {
+  display: none;
+}
 /* ATTRIBUTION STYLING */
 .attribution {
   font-size: 11px;
