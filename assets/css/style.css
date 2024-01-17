@@ -109,9 +109,16 @@ header {
 .minus-icon {
   display: none;
 }
-.active-list {
+.active-list .minus-icon {
   display: block;
 }
+.active-list .plus-icon {
+  display: none;
+}
+.active-list .faq_answer {
+  display: block;
+}
+
 .inactive-list {
   display: none;
 }

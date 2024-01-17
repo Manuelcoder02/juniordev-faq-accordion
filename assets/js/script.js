@@ -5,74 +5,75 @@ nd if I click on it again, it should be hidden. */
 // Select all the questions and answers
 const faqQuestions = document.querySelectorAll(".faq-question");
 const faqAnswers = document.querySelectorAll(".faq_answer");
-const menuToggle = document.querySelector(".toggle-list");
+const menuToggle = document.querySelectorAll(".toggle-list");
 
 const btnPlus = document.querySelectorAll(".plus-icon");
 const btnMinus = document.querySelectorAll(".minus-icon");
 console.log(btnPlus, btnMinus);
 
-// faqQuestions.forEach((question) => {
-//   question.addEventListener("click", () => {
-//     faqAnswers.forEach((answer) => {
-//       answer.classList.toggle("active-list");
-//     });
-//     // question.nextElementSibling.classList.toggle("show");
-//   });
-// });
-
 // toggling the Aaria-expanded attributes dynamically
-// const isExpanded = function () {
-//   menuToggle.attributes = "aria-expanded";
-// };
+//
 
-faqQuestions[0].addEventListener("click", function () {
-  faqAnswers[0].classList.toggle("active-list");
-  faqAnswers[1].classList.remove("active-list");
-  faqAnswers[2].classList.remove("active-list");
-  faqAnswers[3].classList.remove("active-list");
+menuToggle[0].addEventListener("click", function () {
+  faqQuestions[0].classList.toggle("active-list");
 
-  btnPlus[0].classList.toggle("inactive-list");
-  btnMinus[0].classList.toggle("active-list");
-  btnMinus[1].classList.toggle("inactive-list");
-  btnMinus[2].classList.toggle("inactive-list");
-  btnMinus[3].classList.toggle("inactive-list");
+  const isExpanded = menuToggle[0].attributes["aria-expanded"];
+  console.log(isExpanded.value);
+  if (isExpanded.value === "true") {
+    menuToggle[0].ariaExpanded = "false";
+  } else {
+    menuToggle[0].ariaExpanded = "true";
+  }
+
+  faqQuestions[1].classList.remove("active-list");
+  faqQuestions[2].classList.remove("active-list");
+  faqQuestions[3].classList.remove("active-list");
 });
 
-faqQuestions[1].addEventListener("click", function () {
-  faqAnswers[1].classList.toggle("active-list");
-  faqAnswers[0].classList.remove("active-list");
-  faqAnswers[2].classList.remove("active-list");
-  faqAnswers[3].classList.remove("active-list");
+menuToggle[1].addEventListener("click", function () {
+  faqQuestions[1].classList.toggle("active-list");
 
-  btnPlus[1].classList.toggle("inactive-list");
-  btnMinus[1].classList.toggle("active-list");
-  btnMinus[0].classList.toggle("inactive-list");
-  btnMinus[2].classList.toggle("inactive-list");
-  btnMinus[3].classList.toggle("inactive-list");
+  const isExpanded = menuToggle[1].attributes["aria-expanded"];
+  console.log(isExpanded.value);
+  if (isExpanded.value === "true") {
+    menuToggle[1].ariaExpanded = "false";
+  } else {
+    menuToggle[1].ariaExpanded = "true";
+  }
+
+  faqQuestions[0].classList.remove("active-list");
+  faqQuestions[2].classList.remove("active-list");
+  faqQuestions[3].classList.remove("active-list");
 });
 
-faqQuestions[2].addEventListener("click", function () {
-  faqAnswers[2].classList.toggle("active-list");
-  faqAnswers[0].classList.remove("active-list");
-  faqAnswers[1].classList.remove("active-list");
-  faqAnswers[3].classList.remove("active-list");
+menuToggle[2].addEventListener("click", function () {
+  faqQuestions[2].classList.toggle("active-list");
 
-  btnPlus[2].classList.toggle("inactive-list");
-  btnMinus[2].classList.toggle("active-list");
-  btnMinus[1].classList.toggle("inactive-list");
-  btnMinus[0].classList.toggle("inactive-list");
-  btnMinus[3].classList.toggle("inactive-list");
+  const isExpanded = menuToggle[2].attributes["aria-expanded"];
+  console.log(isExpanded.value);
+  if (isExpanded.value === "true") {
+    menuToggle[2].ariaExpanded = "false";
+  } else {
+    menuToggle[2].ariaExpanded = "true";
+  }
+
+  faqQuestions[0].classList.remove("active-list");
+  faqQuestions[1].classList.remove("active-list");
+  faqQuestions[3].classList.remove("active-list");
 });
 
-faqQuestions[3].addEventListener("click", function () {
-  faqAnswers[3].classList.toggle("active-list");
-  faqAnswers[0].classList.remove("active-list");
-  faqAnswers[2].classList.remove("active-list");
-  faqAnswers[1].classList.remove("active-list");
+menuToggle[3].addEventListener("click", function () {
+  faqQuestions[3].classList.toggle("active-list");
 
-  btnPlus[3].classList.toggle("inactive-list");
-  btnMinus[3].classList.toggle("active-list");
-  btnMinus[1].classList.toggle("inactive-list");
-  btnMinus[2].classList.toggle("inactive-list");
-  btnMinus[0].classList.toggle("inactive-list");
+  const isExpanded = menuToggle[3].attributes["aria-expanded"];
+  console.log(isExpanded.value);
+  if (isExpanded.value === "true") {
+    menuToggle[3].ariaExpanded = "false";
+  } else {
+    menuToggle[3].ariaExpanded = "true";
+  }
+
+  faqQuestions[0].classList.remove("active-list");
+  faqQuestions[2].classList.remove("active-list");
+  faqQuestions[1].classList.remove("active-list");
 });
